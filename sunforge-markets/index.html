@@ -29,10 +29,10 @@ Sunforge Markets
 
 <div class="form-box">
 
-<form action="create-portfolio.html">
+<form onsubmit="loginUser(); return false;">
 
 <label>Username</label>
-<input type="text" required>
+<input type="text" id="username" required>
 
 <label>Password</label>
 <input type="password" required>
@@ -45,6 +45,13 @@ Sunforge Markets
 
 </div>
 </div>
+<script>
+function loginUser() {
+let username = document.getElementById("username").value;
+localStorage.setItem("username", username);
+window.location.href = "view-portfolio.html";
+}
 
+</script>
 </body>
 </html>

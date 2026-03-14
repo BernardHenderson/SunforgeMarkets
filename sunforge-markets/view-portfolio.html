@@ -25,10 +25,27 @@ Sunforge Markets
 
 <div class="content">
 
-<h2>Your Portfolio</h2>
+<h2>Welcome <span id="user"></span></h2>
+<h2>Portfolio Summary</h2>
 
+<div class="dashboard">
+
+<div class="card">
 <h3>Cash Balance</h3>
 <p>$10,000</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Value</h3>
+<p>$12,850</p>
+</div>
+
+<div class="card">
+<h3>Daily Change</h3>
+<p>+3.2%</p>
+</div>
+
+</div>
 
 <h3>Owned Stocks</h3>
 
@@ -88,6 +105,10 @@ Sunforge Markets
 
 </div>
 </div>
+<script>
+let username = localStorage.getItem("username");
+document.getElementById("user").innerText = username;
+</script>
 
 </body>
 </html>
